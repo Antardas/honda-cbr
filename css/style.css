@@ -3,6 +3,55 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+.background {
+    background:#264653;
+;
+}
+.orange-btn-bg {
+    background-color: #E76F51, 100%;
+}
+.relative {
+    position: relative;
+}
+.orange-text {
+    color: #E76F51;
+}
+.orange-btn {
+    border: 0.2rem solid #E76F51;
+    border-radius: 0.2rem;
+    padding: 0.5em 1.2em;
+    position: relative;
+    bottom: 0%;
+    background: none;
+    
+}
+.orange-btn a{
+    text-decoration: none;
+    color: #E76F51;
+}
+.orange-btn:hover {
+    background-color: #E76F51;
+}
+.orange-btn:hover a {
+    color: #fff;
+}
+.far, .fas {
+    color: #E76F51;
+}
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.floating {
+    animation: floating 2s ease-in-out  infinite alternate both;
+}
 /* .orange-button-sm {
     background-color: #E76F51;
     display: block;
