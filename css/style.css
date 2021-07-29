@@ -1,56 +1,108 @@
 /* UTILITIES */
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .background {
-    background:#264653;
-;
+  background: #264653;
 }
 .orange-btn-bg {
-    background-color: #E76F51, 100%;
+  background-color: #e76f51, 100%;
 }
-.relative {
-    position: relative;
-}
+
 .orange-text {
-    color: #E76F51;
+  color: #e76f51;
 }
 .orange-btn {
-    border: 0.2rem solid #E76F51;
-    border-radius: 0.2rem;
-    padding: 0.5em 1.2em;
-    position: relative;
-    bottom: 0%;
-    background: none;
-    
+  border: 0.2rem solid #e76f51;
+  border-radius: 0.2rem;
+  padding: 0.5em 1.2em;
+  position: relative;
+  bottom: 0%;
+  background: none;
 }
-.orange-btn a{
-    text-decoration: none;
-    color: #E76F51;
+.orange-btn a {
+  text-decoration: none;
+  color: #e76f51;
 }
 .orange-btn:hover {
-    background-color: #E76F51;
+  background-color: #e76f51;
 }
 .orange-btn:hover a {
-    color: #fff;
+  color: #fff;
 }
-.far, .fas {
-    color: #E76F51;
+.far,
+.fas {
+  color: #e76f51;
 }
 @keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .floating {
-    animation: floating 2s ease-in-out  infinite alternate both;
+  animation: floating 3s ease-in-out infinite alternate both;
+}
+.zoom {
+  overflow: hidden;
+}
+.zoom-image {
+  transition: all 0.5s ease-in-out;
+}
+
+.card-image::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 75%;
+  background-color: rgba(18, 18, 24, 0.473);
+}
+.card:hover .card-image::after {
+  display: block;
+}
+.zoom:hover .zoom-image {
+  transform: scale(1.3);
+}
+
+/* icon  */
+.icon {
+  visibility: hidden;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 20%;
+  right: auto;
+  transition: all 0.5s ease;
+}
+.icon span {
+    
+  padding: 15px 15px;
+  color: #e76f51;
+  display: inline-block;
+  background-color: #e76f51;
+  transform: rotate(30deg);
+  margin: 2px;
+}
+.icon span i {
+  color: #ffffff;
+  transform: rotate(-30deg);
+}
+/* Hover Icon */
+.card:hover .icon {
+  display: block;
+  visibility: visible;
+  top: 30%;
+}
+.icon span:hover {
+    background-color: black;
 }
 /* .orange-button-sm {
     background-color: #E76F51;
